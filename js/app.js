@@ -238,6 +238,7 @@ while (i < people.length) {
 }
 */
 
+/*
 let i = 0;
 
 while (i < people.length) {
@@ -245,3 +246,62 @@ while (i < people.length) {
     i++;
 
 }
+    */
+
+
+
+
+//%%%%% FUNCTIONS 
+// let result = 5 + 6;
+// console.log(result)
+
+// result = 2 + 6;
+
+// console.log(result)
+
+
+function add( x =5, y = 7){
+    return x + y;
+}
+
+// let result = add(6, 12);
+// console.log(result);
+
+// result  = add(10, 288);
+// console.log(result);
+
+// const moreResults = add(19, 20) + add(50, 100);
+// console.log(moreResults);
+
+
+/*
+function greetUser(){
+    console.log('Hello User');
+    console.log('You are highly welcome');
+    console.log('I hope you are enjoying the developer series?');   
+
+    result = add(30, 50);
+    console.log(`the result of the addition is ${result}`);
+    
+}
+
+greetUser();
+*/
+
+
+// %%%%%%%%%%%%%% ARROW Function
+
+const subtract = (x, y) =>  x - y;
+
+
+let result2 = subtract(10, 5);
+console.log(result2);
+
+const countries = ['Germany', 'Portugal', 'Spain', 'Nigeria', 'USA', 'Gabon', 'Guinea Republic'];
+
+
+const filtered = countries.filter(function(country){
+    return country.substring(0,1) === 'G';
+});
+
+console.log(filtered);
