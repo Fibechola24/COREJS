@@ -165,7 +165,83 @@ console.log(firstThreeLetters);
 */
 
 
+// %%%%%%%% LOOPS %%%%%%%%
+
+/*
+// for loop
+
+const people = ['Alice', 'Jonathan', 'Bob', 'Victor', 'Stella', 'Daniel'];
+
+//console.log('Alice');
+
+
+console.log(people[0]);
+console.log(people[1]);
+console.log(people[2]);
+console.log(people[3]);
+*/
+/*
+for( let i = 0; i < people.length; i++){
+    console.log(people[i]);
+}
+    */
+//console.log(people.length);
 
 
 
 
+
+/*
+//%%%%%%%  For of loop
+
+const people = ['Alice', 'Jonathan', 'Bob', 'Victor', 'Stella', 'Daniel'];
+
+for (const person of people) {
+    console.log(person);
+}
+
+*/
+
+
+
+/*
+//%%%%%%%%%  FOR EACH LOOP 
+
+const people = ['Alice', 'Jonathan', 'Bob', 'Victor', 'Stella', 'Daniel'];
+
+// people.forEach(function(person){
+//     console.log(person);
+// });
+
+//arrow function expression
+people.forEach(person => {
+    console.log(person);
+});
+
+*/
+
+
+
+//%%%% WHILE LOOP
+
+const people = ['Alice', 'Jonathan', 'Bob', 'Victor', 'Stella', 'Daniel'];
+
+
+/*
+//avoid infinite loop
+let i = 0;
+
+while (i < people.length) {
+    console.log(people[i]);
+    i++;
+
+}
+*/
+
+let i = 0;
+
+while (i < people.length) {
+    console.log(people[i]);
+    i++;
+
+}
