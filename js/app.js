@@ -224,7 +224,7 @@ people.forEach(person => {
 
 //%%%% WHILE LOOP
 
-const people = ['Alice', 'Jonathan', 'Bob', 'Victor', 'Stella', 'Daniel'];
+// const people = ['Alice', 'Jonathan', 'Bob', 'Victor', 'Stella', 'Daniel'];
 
 
 /*
@@ -260,9 +260,9 @@ while (i < people.length) {
 // console.log(result)
 
 
-function add( x =5, y = 7){
-    return x + y;
-}
+// function add( x =5, y = 7){
+//     return x + y;
+// }
 
 // let result = add(6, 12);
 // console.log(result);
@@ -290,7 +290,7 @@ greetUser();
 
 
 // %%%%%%%%%%%%%% ARROW Function
-
+/*
 const subtract = (x, y) =>  x - y;
 
 
@@ -305,3 +305,69 @@ const filtered = countries.filter(function(country){
 });
 
 console.log(filtered);
+*/
+
+// %%%% OBJECTS
+
+const student = {
+    firstName: 'Victor',
+    lastName: 'Rowland',
+    email: 'victorR@hsrw.org',
+    age: 25,
+    //thisTest : this,
+    isAlive: true,
+    address: {
+        city: 'Duesseldorf',
+        state: 'NRW',
+        counry: 'Germany'
+    },
+
+    fullName: function(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+   
+};
+
+
+
+//console.log(student);
+
+// console.log(student.firstName);
+// console.log(student.lastName);
+// console.log(student.address);
+
+// student.country = 'Nigeria';
+// console.log(student.country);
+
+// console.log(student.fullName());
+
+// console.log(student.thisTest);
+
+// function greetStudent(obj){
+//     console.log(`Hello ${obj.fullName()}`);
+//     console.log("you are welcome");  
+// }
+
+// greetStudent(student);
+
+// const { firstName: fn, address:{city}} = student;
+
+// console.log(fn);
+// console.log(city);
+
+// for in loop
+// for (const prop in student){
+//     if (student.hasOwnProperty(prop)){
+//     console.log(`${prop}: ${student[prop]}`);
+//     }
+// }
+
+
+
+//delete student.fullName;
+
+const receivedinfo = JSON.stringify(student);
+
+//parse
+
+console.log(JSON.parse(receivedinfo));
