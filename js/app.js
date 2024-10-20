@@ -365,9 +365,78 @@ const student = {
 
 
 //delete student.fullName;
-
+/*
 const receivedinfo = JSON.stringify(student);
 
 //parse
 
 console.log(JSON.parse(receivedinfo));
+*/
+
+
+
+// %% CLASSES
+
+/*
+class Student {
+    //getters
+    //setters
+
+    #taxId = '';
+
+    get taxID(){
+        return `***-***-${this.#taxId.slice(-4)}`;
+    }
+
+    set taxID(value){
+        this.#taxId = value;
+    }
+
+    constructor(firstName, lastName, email, age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+    }
+
+    // getFullName(){
+    //     return `${this.firstName} ${this.lastName}`;
+    // }
+
+    getFullName = () => `${this.firstName} ${this.lastName}`;
+}
+
+const student1 = new Student('Victor', 'Rowland', 'victorhsrw.org', 25);
+const student2 = new Student ('Stella', 'Rowland', 'stell@hsrw.org', 24);
+
+// console.log(student1.firstName); 
+// console.log(student2.lastName);
+// console.log(student2.age);
+
+// student1.taxID = '1234567890';
+
+// console.log(student1.taxID);
+
+//console.log(student1.getFullName());
+
+*/
+
+
+class Product {
+
+    constructor(name, price, category){
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+
+
+    applyDiscount(discount){
+        this.price = this.price - (this.price*discount/100);
+        console.log(`${this.name} is now priced at ${this.price} after a ${discount}% discount`);
+    }
+}
+
+const LenovoL340 = new Product('LenovoL340', 2000, 'computers');
+
+LenovoL340.applyDiscount(10);
