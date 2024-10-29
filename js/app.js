@@ -421,7 +421,7 @@ const student2 = new Student ('Stella', 'Rowland', 'stell@hsrw.org', 24);
 
 */
 
-
+/*
 class Product {
 
     constructor(name, price, category){
@@ -440,3 +440,71 @@ class Product {
 const LenovoL340 = new Product('LenovoL340', 2000, 'computers');
 
 LenovoL340.applyDiscount(10);
+*/
+
+
+
+// IIFE
+//Immediately invoked function expression
+
+// function greetStudent(){
+//     console.log('Hello, Student');
+// }
+
+function greetStudent(){
+     console.log('Hello from another script');
+    
+}
+
+//greetStudent();
+
+(function(app){
+    app.greetStudent = function(){
+        console.log('Hello from the other app');
+        
+    }
+
+})(window.otherApp = window.otherApp || {});
+
+//otherApp.greetStudent();
+
+
+(function(app, fullName){
+    fullName = fullName;
+    app.greetStudent = function(){
+        console.log('Hello student');
+        console.log(`Hello ${fullName}`);
+    }
+
+    app.Student = class {
+        constructor(firstName, lastName, age){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+    }
+
+})(window.app = window.app || {}, 'Victor Rowland');
+//console.log(window.app);
+app.greetStudent();
+
+
+/*
+app.greetStudent();
+const student1 = new app.Student('Victor', 'Rowlad', 25);
+const student2 = new app.Student('Stella', 'Rowland', 21);
+
+//console.log(student2.lastName);
+
+
+(function(app){
+    app.goodByeStudent = function(){
+        console.log('Goodbye awesome student');
+    }
+
+})(window.app = window.app || {});
+
+app.goodByeStudent();
+*/
+
+
